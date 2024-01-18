@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://c3vpwq1tqabid"]
+
+[ext_resource type="Texture2D" uid="uid://bxgnce1ij44cu" path="res://2a91cec1d6.jpg" id="1_iyomt"]
+[ext_resource type="PackedScene" uid="uid://db3ck4u64cras" path="res://scenes/ground_1.tscn" id="2_c0ku1"]
+[ext_resource type="PackedScene" uid="uid://cbxifigajxeu8" path="res://scenes/земля1.tscn" id="3_16i88"]
+[ext_resource type="PackedScene" uid="uid://bmu3q4kh8sfjo" path="res://scenes/гусь.tscn" id="4_jnrqn"]
+[ext_resource type="PackedScene" uid="uid://dyki3hvuu28go" path="res://scenes/ground2.tscn" id="5_rhgyu"]
+[ext_resource type="Texture2D" uid="uid://c7oaaj8qfme4g" path="res://Pictures/земля.png" id="6_dblce"]
+[ext_resource type="Texture2D" uid="uid://60r5dxvw83lm" path="res://Pictures/Без_названия-removebg-preview (1).png" id="7_iqtgl"]
+[ext_resource type="PackedScene" uid="uid://dy31cd48wla3d" path="res://scenes/portal.tscn" id="8_vluc6"]
+[ext_resource type="PackedScene" uid="uid://ogcjolitbs4v" path="res://scenes/barrier.tscn" id="9_du0mu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="фон" type="Sprite2D" parent="."]
+position = Vector2(-72, 45)
+scale = Vector2(17.2539, 15.9517)
+texture = ExtResource("1_iyomt")
+centered = false
+
+[node name="ground1" parent="." instance=ExtResource("2_c0ku1")]
+position = Vector2(1998, 2283)
+
+[node name="земля1" parent="." instance=ExtResource("3_16i88")]
+position = Vector2(5822, 4395)
+
+[node name="Гусь" parent="." instance=ExtResource("4_jnrqn")]
+
+[node name="ground2" parent="." instance=ExtResource("5_rhgyu")]
+position = Vector2(16845, 4359)
+
+[node name="земля" type="StaticBody2D" parent="."]
+position = Vector2(1421, -857)
+scale = Vector2(1.77333, 3.02338)
+
+[node name="Земля3" type="Sprite2D" parent="земля"]
+modulate = Color(0.270588, 0.447059, 1, 1)
+position = Vector2(5083.09, 1771.2)
+scale = Vector2(1.45919, 1.41562)
+texture = ExtResource("6_dblce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="земля"]
+
+[node name="coin" type="Area2D" parent="."]
+position = Vector2(3178, -785)
+
+[node name="Sprite2D" type="Sprite2D" parent="coin"]
+position = Vector2(3417, 3630)
+scale = Vector2(2.95089, 2.66333)
+texture = ExtResource("7_iqtgl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin"]
+
+[node name="Portal" parent="." instance=ExtResource("8_vluc6")]
+position = Vector2(11626, 3785)
+
+[node name="barrier" parent="." instance=ExtResource("9_du0mu")]
+position = Vector2(11526, 3756)

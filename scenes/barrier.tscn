@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ogcjolitbs4v"]
+
+[ext_resource type="Texture2D" uid="uid://bi6y1bwclduxm" path="res://Pictures/ежек.png" id="1_thps8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4fkt"]
+size = Vector2(138.896, 116.196)
+
+[node name="barrier" type="Area2D"]
+position = Vector2(11700, 3852)
+scale = Vector2(5.78849, 3.79508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-386.631, 44.2676)
+shape = SubResource("RectangleShape2D_d4fkt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-388.877, 34.7817)
+scale = Vector2(0.147383, 0.160306)
+texture = ExtResource("1_thps8")
